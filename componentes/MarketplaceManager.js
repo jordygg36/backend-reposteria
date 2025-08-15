@@ -34,8 +34,19 @@ class MarketManager {
     };
 
     prepareService = async () => {
+        const allowedOrigins = [
+            'https://frontend-reposteria.netlify.app',
+            'https://689f4fe7b880a7000832c47c--frontend-reposteria.netlify.app'
+        ];
+
         this.#appExpress.use(cors({
-            origin: 'https://frontend-reposteria.netlify.app', // Ensure this matches the frontend's origin
+            origin: (origin, callback) => {
+                if (!origin || allowedOrigins.includes(origin)) {
+                    callback(null, true);
+                } else {
+                    callback(new Error('Not allowed by CORS'));
+                }
+            },
             methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
             allowedHeaders: ['Content-Type', 'Authorization']
         }));
