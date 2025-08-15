@@ -1,15 +1,15 @@
 {
     "DevConfig": {
         "service": {
-            "host": "127.0.0.1",
+            "host": "sql3.freesqldatabase.com",
             "port": 5000
         },
         "database": {
-            "host": "127.0.0.1",
+            "host": "sql3.freesqldatabase.com",
             "port": 3306,
-            "user": "root",
-            "password": "",
-            "database": "bruma"
+            "user": "sql3795134",
+            "password": "sSbGWvCdju",
+            "database": "sql3795134"
         }
     }
 }

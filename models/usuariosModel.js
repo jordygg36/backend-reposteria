@@ -2,10 +2,10 @@ const mysql = require('mysql2');
 const bcrypt = require('bcryptjs');
 
 const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'bruma',
+    host: 'sql3.freesqldatabase.com',
+    user: 'sql3795134',
+    password: 'sSbGWvCdju',
+    database: 'sql3795134',
     port: 3306
 });
 
