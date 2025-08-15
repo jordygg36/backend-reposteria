@@ -35,7 +35,7 @@ class MarketManager {
 
     prepareService = async () => {
         this.#appExpress.use(cors({
-            origin: 'http://localhost:4200', // Ensure this matches the frontend's origin
+            origin: 'https://frontend-reposteria.netlify.app', // Ensure this matches the frontend's origin
             methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
             allowedHeaders: ['Content-Type', 'Authorization']
         }));
